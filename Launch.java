@@ -13,8 +13,9 @@ public class Launch {
 		
 	public static void main(String[] args) {
 		
-		boolean debug = true;
-		int debugInputValue = 3;
+		boolean debug = false; // set this to true if you do not want to see the dialogs when program is started 										  	
+		int debugInputValue = 3; // and set the value you want the program to select when you run in 
+										   // debug mode and it will chose it bypassing the dialogs
 		
 		Scanner scanner = new Scanner(System.in);		
 		
