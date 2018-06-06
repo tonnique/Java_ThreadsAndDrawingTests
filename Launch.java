@@ -19,11 +19,6 @@ public class Launch {
 		
 		Scanner scanner = new Scanner(System.in);		
 		
-		EventQueue.invokeLater(new Runnable() {
-			
-			@Override
-			public void run() {
-		
 				if (debug) {
 					processUserInput(debugInputValue);
 					return;
@@ -41,12 +36,11 @@ public class Launch {
 					} 
 					answer = scanner.nextInt();
 				
-				} while (!processUserInput(answer));				
+				} while (!processUserInput(answer));
+
+				scanner.close();				
 			}
-		});
-		
-		scanner.close();
-	}
+
 	
 	private static boolean processUserInput(int choice) {
 		boolean result = false;
@@ -69,6 +63,7 @@ public class Launch {
 			result = false;
 			break;
 		}
+		
 		return result;
 	}
 }
